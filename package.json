@@ -2,16 +2,28 @@
   "name": "scaleflex",
   "version": "1.0.0",
   "description": "scaleFlex task",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "start": "webpack-dev-server .",
-    "build": "Webpack .",
-    "test": "test"
+    "test": "test",
+    "dev": "webpack --progress --watch --env dev",
+    "dev-amd": "webpack --progress --watch --env dev --amd",
+    "build": "webpack --env dev && webpack --env dev --amd && webpack --env build && webpack --env build --amd"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hossamabdulmagid/scaleflex.git"
   },
+  "keywords": [
+    "webpack",
+    "es6",
+    "starter",
+    "library",
+    "universal",
+    "umd",
+    "commonjs",
+    "jest"
+  ],
   "author": "hossam abdulmaged",
   "license": "ISC",
   "bugs": {
@@ -20,7 +32,6 @@
   "homepage": "https://github.com/hossamabdulmagid/scaleflex#readme",
   "devDependencies": {
     "@babel/cli": "^7.17.6",
-    "path": "^0.12.7",
     "@babel/core": "^7.17.9",
     "@babel/plugin-transform-runtime": "^7.17.0",
     "@babel/preset-env": "^7.16.11",
@@ -32,9 +43,11 @@
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-jest": "^26.1.4",
+    "path": "^0.12.7",
     "webpack": "^5.72.0",
     "webpack-cli": "^4.9.2",
-    "webpack-dev-server": "^4.8.1"
+    "webpack-dev-server": "^4.8.1",
+    "yargs": "^10.0.3"
   },
   "dependencies": {
     "react": "^18.0.0",
